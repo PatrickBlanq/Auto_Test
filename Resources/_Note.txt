@@ -32,7 +32,7 @@ pip install --upgrade selenium==4.0.0
 git init
 git status
 git add .
-git commit
+git commit -m""
 git diff
 q
 git log
