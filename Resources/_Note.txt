@@ -1,0 +1,38 @@
+*** 执行robot命令
+robot -d Output --loglevel TRACE Tests/*.robot
+robot -d Output --loglevel TRACE Tests/Long_In_C34825.robot
+robot -d Output --loglevel TRACE Tests/Video_Playback_C34711.robot
+robot -d Output --loglevel TRACE Tests/Test.robot
+robot -d Output --loglevel TRACE Tests/TestBasic.robot
+robot -d Output --loglevel TRACE Tests/Test_360Calculater.robot
+
+*** 启动 appium
+appium -a 127.0.0.1 -p 7777 --session-override
+
+*** appium不自动退出APP
+appium --default-capabilities {\"newCommandTimeout\":0}
+appium -a 127.0.0.1 -p 7777  --default-capabilities {\"newCommandTimeout\":0}
+
+*** ADB获取包名和界面名：
+adb shell dumpsys window | findstr mCurrentFocus
+org.gtv.app/org.gtv.newapp.ui.MainActivity
+com.meizu.flyme.calculator/com.meizu.flyme.calculator.Calculator
+com.android.calculator2/com.android.calculator2.view.BaseActivity
+
+*** ADB获取安卓版本：
+adb shell getprop ro.build.version.release
+
+*** 系统包名
+com.android.settings/.Settings
+
+*** selenium 升级
+pip install --upgrade selenium==4.0.0
+
+*** 自动化场景
+实现登录，https://testrail.gcoder.io/index.php?/cases/view/34825
+模拟登录失败，
+播放视频，测试视频页面的用户操作，
+点赞，点踩，评论等，
+#Open Application	${Server} 	platformName=${PlatformName}	platformVersion=8.1	deviceName=${deviceName}  appPackage=com.android.calculator2	appActivity=com.android.calculator2.view.BaseActivity
+#Open application  http://localhost:4723/wd/hub    platformName=${PlatformName}  platformVersion=${PlatformVersion}    deviceName    ${deviceName}    appPackage=${AppPackage}    appActivity=${AppActivity}
+papge-element-type
