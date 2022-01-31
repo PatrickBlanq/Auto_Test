@@ -41,6 +41,8 @@ git relog
 git checkout --phthon.py
 git remote add origin git@github.com:PatrickBlanq/GTV_Test.git
 git branch GTV1
+git push -u origin main
+
 #Open Application	${Server} 	platformName=${PlatformName}	platformVersion=8.1	deviceName=${deviceName}  appPackage=com.android.calculator2	appActivity=com.android.calculator2.view.BaseActivity
 #Open application  http://localhost:4723/wd/hub    platformName=${PlatformName}  platformVersion=${PlatformVersion}    deviceName    ${deviceName}    appPackage=${AppPackage}    appActivity=${AppActivity}
 papge-element-type
