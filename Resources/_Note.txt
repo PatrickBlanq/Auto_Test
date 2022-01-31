@@ -28,11 +28,19 @@ com.android.settings/.Settings
 *** selenium 升级
 pip install --upgrade selenium==4.0.0
 
-*** 自动化场景
-实现登录，https://testrail.gcoder.io/index.php?/cases/view/34825
-模拟登录失败，
-播放视频，测试视频页面的用户操作，
-点赞，点踩，评论等，
+
+git init
+git status
+git add .
+git commit
+git diff
+q
+git log
+git reset --hard HEAD
+git relog
+git checkout --phthon.py
+git remote add origin git@github.com:PatrickBlanq/GTV_Test.git
+git branch GTV1
 #Open Application	${Server} 	platformName=${PlatformName}	platformVersion=8.1	deviceName=${deviceName}  appPackage=com.android.calculator2	appActivity=com.android.calculator2.view.BaseActivity
 #Open application  http://localhost:4723/wd/hub    platformName=${PlatformName}  platformVersion=${PlatformVersion}    deviceName    ${deviceName}    appPackage=${AppPackage}    appActivity=${AppActivity}
 papge-element-type
